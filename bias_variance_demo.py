@@ -70,7 +70,7 @@ fig_main.update_layout(
     template="plotly",
     paper_bgcolor="white",
     plot_bgcolor="white",
-    height=400,
+    height=800,
     margin=dict(t=30),
     showlegend=True,
     legend=dict(
@@ -173,7 +173,7 @@ def create_theoretical_plot():
         template="plotly",
         paper_bgcolor="white",
         plot_bgcolor="white",
-        height=400,
+        height=800,
         margin=dict(t=30, b=30, l=60, r=30),
         showlegend=True,
         legend=dict(
@@ -190,6 +190,11 @@ def create_theoretical_plot():
             dtick=1,
             ticktext=list(range(1, 16)),
             tickvals=list(range(1, 16))
+        ),
+        yaxis=dict(
+            showticklabels=False,  # Hide y-axis values
+            showgrid=True,  # Keep the horizontal grid lines
+            zeroline=True  # Keep the zero line
         ),
         title={
             'text': "Bias-Variance Tradeoff",
