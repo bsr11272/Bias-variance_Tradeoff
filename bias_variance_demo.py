@@ -51,7 +51,7 @@ for i, coef in enumerate(reversed(coeffs)):
 st.code(equation)
 
 # Calculate metrics
-bias = np.mean(np.abs(y_true - y_pred))
+bias = np.mean((y_true - y_pred))
 variance = np.var(y_pred)
 
 # Create main plot
